@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+html {
+  font-family: 'Poppins';
+  letter-spacing: 2px;
+  color: #101828;
+  scroll-behavior: smooth;
+}
