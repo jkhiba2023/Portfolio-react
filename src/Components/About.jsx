@@ -61,14 +61,14 @@ export const About = () => {
                     Jr Frontend Engineer @ Mak {"{"}Byte{"}"}
                   </h3>
                   <p className="text-gray-400">October 2024 - Present</p>
-                  <p className="text-gray-400">
+                  <p className="text-gray-400 tracking-tight">
                     Developed and maintained multiple applications with a focus
                     on performance and accessibility.
                   </p>
                 </div>
 
                 {/* Education */}
-                <div className="">
+                <div className=" tracking-tight">
                   <h3 className="text-lg font-semibold text-gray-300">
                     B.Sc. I.T
                   </h3>
