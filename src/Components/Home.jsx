@@ -30,7 +30,7 @@ export const Home = ({ toggle, setToggle, handleToggle }) => {
       <section>
         <div className="text-center">
           <h1 className="font-bold text-3xl md:text-5xl mt-28 mb-5">
-            Jr Frontend Engineer
+            Frontend Engineer
           </h1>
           <h3 className="font-bold text-xl md:text-3xl tracking-wide mb-3">
             Hello, my name is{" "}
@@ -39,11 +39,12 @@ export const Home = ({ toggle, setToggle, handleToggle }) => {
             </span>
           </h3>
           <p className="text-sm md:text-base/7 px-1 md:px-5 tracking-wide">
-            I'm a Front‑End Engineer with 1 year of experience building
-            responsive, user‑friendly websites using HTML, CSS, JavaScript, and
-            React. I focus on clean, efficient code, performance optimization,
-            and creating seamless digital experiences while continuously
-            upgrading my skills.
+            As a Front-End Engineer with 1.5 years of professional experience, I
+            specialize in building responsive and user-friendly websites using
+            HTML, CSS, JavaScript, and React. I prioritize clean code practices,
+            performance optimization, and seamless user experiences, while
+            actively upgrading my skills to stay aligned with evolving industry
+            trends.
           </p>
           <div className="mt-10">
             <a

@@ -58,12 +58,24 @@ export const About = () => {
                 {/* Experience */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-300">
-                    Jr Frontend Engineer @ Mak {"{"}Byte{"}"}
+                    Frontend Engineer @ Mak {"{"}Byte{"}"}
                   </h3>
                   <p className="text-gray-400">October 2024 - Present</p>
                   <p className="text-gray-400 tracking-tight">
                     Developed and maintained multiple applications with a focus
                     on performance and accessibility.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-300">
+                    Jr Dot Net Developer @ Mobilestyx Consulting and Solutions
+                    Pvt Ltd
+                  </h3>
+                  <p className="text-gray-400">May 2024 - September 2024</p>
+                  <p className="text-gray-400 tracking-tight">
+                    Completed internship with hands-on experience in full-stack
+                    development, including frontend design, backend logic, and
+                    database integration with CRUD functionality.
                   </p>
                 </div>
 
