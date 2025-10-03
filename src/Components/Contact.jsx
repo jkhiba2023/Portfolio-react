@@ -4,12 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 export const Contact = () => {
-  const [state, formSubmit] = useForm("xdkwewgq"); // renamed handleSubmit -> formSubmit
-
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
-
+  const [state, formSubmit] = useForm("xdkwewgq");
   const [meet, setMeet] = useState({
     fullName: "",
     emailid: "",
@@ -23,131 +18,108 @@ export const Contact = () => {
   };
 
   const localSubmit = (event) => {
-    // renamed this one too
     event.preventDefault();
-    console.log(meet);
-
-    // if you want to send to Formspree:
     formSubmit(event);
-
-    // reset form
     setMeet({ fullName: "", emailid: "", phoneNumber: "", message: "" });
   };
 
+  if (state.succeeded) {
+    return (
+      <p className="text-center text-green-500 mt-10">
+        Thanks for reaching out!
+      </p>
+    );
+  }
+
   return (
-    <section id="contact" className="text-gray-800 mt-10  px-6 md:px-3">
-      <div className="space-y-10">
-        <h1 className="text-4xl font-extrabold text-gray-900 border-b-4 border-blue-500 inline-block pb-2">
+    <section id="contact" className="mt-24 px-4 md:px-0">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 border-b-4 border-blue-500 inline-block pb-2">
           Contact
         </h1>
       </div>
-      <div className="mt-10">
-        <p className="text-center font-medium">
-          If you are looking for a passionate and dedicated Front-End Engineer,
-          I’d be glad to connect. I am open to interview opportunities where I
-          can showcase my skills in HTML, CSS, JavaScript, and React, and
-          discuss how I can contribute to your team. Please feel free to reach
-          out—I’d be happy to schedule a conversation at your convenience.
-        </p>
-      </div>
-      <div className="flex justify-center mt-20 gap-5">
+
+      <p className="text-center text-gray-700 max-w-3xl mx-auto">
+        If you are looking for a passionate Front-End Engineer, I’d be glad to
+        connect. I am open to interview opportunities where I can showcase my
+        skills in HTML, CSS, JavaScript, and React. Please feel free to reach
+        out—I’d be happy to schedule a conversation at your convenience.
+      </p>
+
+      {/* Social Icons */}
+      <div className="flex justify-center mt-12 gap-6">
         <a
           href="https://github.com/jkhiba2023"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 bg-white rounded-full shadow-md hover:shadow-xl hover:scale-110 transition duration-300 ease-in-out"
+          className="p-4 bg-gray-900 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition duration-300"
         >
-          <FaGithub size={40} />
+          <FaGithub size={32} />
         </a>
         <a
           href="https://www.linkedin.com/in/jabir-khan-1833a637b"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 bg-white rounded-full shadow-md hover:shadow-xl hover:scale-110 transition duration-300 ease-in-out"
+          className="p-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition duration-300"
         >
-          <FaLinkedin size={40} className="text-[#0A66C2] " />
+          <FaLinkedin size={32} />
         </a>
         <a
           href="mailto:jabirkhan4748@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-3 bg-white rounded-full shadow-md hover:shadow-xl hover:scale-110 transition duration-300 ease-in-out"
+          className="p-4 bg-red-600 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition duration-300"
         >
-          <SiGmail size={40} className="text-[#EA4335] " />
+          <SiGmail size={32} />
         </a>
-
-        {/* Tooltip */}
-        <span
-          className="absolute left-1/2 -translate-x-1/2 -top-10 
-                   bg-gray-800 text-white text-sm px-2 py-1 rounded 
-                   opacity-0 group-hover:opacity-100 transition-opacity"
-        >
-          jabirkhan4748@gmail.com
-        </span>
       </div>
-      <div className="flex flex-col items-center mt-20 space-y-6">
-        {/* Heading */}
-        <h4 className="font-extrabold uppercase text-2xl hover:underline transition duration-300 ease-in-out">
-          Contact
-        </h4>
 
-        {/* Contact Form Box */}
-        <div className="shadow-none md:shadow md:shadow-gray-400 w-full max-w-2xl p-0 md:p-10 rounded-2xl bg-white">
-          <form className="space-y-4 w-full" onSubmit={localSubmit}>
-            <div>
-              <input
-                type="text"
-                autoComplete="off"
-                name="fullName"
-                className="text-lg md: text-sm border border-gray-400 w-full px-3 py-2 rounded"
-                placeholder="Enter Full Name"
-                value={meet.fullName}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                autoComplete="off"
-                name="emailid"
-                className="text-lg md: text-sm border border-gray-400 w-full px-3 py-2 rounded"
-                placeholder="Enter Your Email ID"
-                value={meet.emailid}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="number"
-                autoComplete="off"
-                name="phoneNumber"
-                className="text-lg md: text-sm border border-gray-400 w-full px-3 py-2 rounded"
-                placeholder="Enter Your Phone No"
-                value={meet.phoneNumber}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div>
-              <textarea
-                name="message"
-                rows="5"
-                autoComplete="off"
-                className="text-lg md: text-sm border border-gray-400 w-full px-3 py-2 rounded"
-                placeholder="Message Me"
-                value={meet.message}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
+      {/* Contact Form */}
+      <div className="flex justify-center mt-16">
+        <div className="w-full max-w-2xl p-8 bg-gray-900 rounded-3xl shadow-2xl shadow-black/40">
+          <form className="space-y-6" onSubmit={localSubmit}>
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              value={meet.fullName}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-800 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              required
+            />
+            <input
+              type="email"
+              name="emailid"
+              placeholder="Email"
+              value={meet.emailid}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-800 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              required
+            />
+            <input
+              type="text"
+              name="phoneNumber"
+              placeholder="Phone Number"
+              value={meet.phoneNumber}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-800 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              required
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              value={meet.message}
+              onChange={handleInputChange}
+              className="w-full px-4 py-3 rounded-xl bg-gray-800 text-gray-100 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+              required
+            />
             <button
               type="submit"
-              className="bg-gray-900 text-gray-100 px-4 py-2 rounded hover:bg-gray-800 transition"
               disabled={state.submitting}
+              className="w-full py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Send
+              Send Message
             </button>
           </form>
         </div>

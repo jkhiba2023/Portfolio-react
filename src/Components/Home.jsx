@@ -3,64 +3,52 @@ import { NavigationLinks } from "../../data/data";
 
 export const Home = ({ toggle, setToggle, handleToggle }) => {
   return (
-    <section className="container">
+    <section id="home" className="relative w-full">
       {/* Desktop Navigation */}
-      <section id="home" className="nav hidden md:flex justify-center mb-10">
-        <header className="navBar flex justify-center mt-4 bg-gray-900 p-3 rounded-2xl fixed top-0 ">
-          <nav>
-            <ul className="flex justify-center gap-3">
-              {NavigationLinks.map((link, id) => {
-                return (
-                  <li
-                    className="text-gray-300 font-bold hover:text-white transition-colors duration-300"
-                    key={id}
-                  >
-                    <a href={link.link}>{link.name}</a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        </header>
-      </section>
-
-      {/* Mobile Navigation Toggle */}
+      <header className="hidden md:flex justify-center mt-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-6 p-3 rounded-3xl fixed top-5 left-1/2 transform -translate-x-1/2 shadow-xl shadow-black/40 z-50">
+        <nav>
+          <ul className="flex justify-center gap-6">
+            {NavigationLinks.map((link, id) => (
+              <li
+                key={id}
+                className="text-gray-300 font-semibold hover:text-white transition-colors duration-300"
+              >
+                <a href={link.link}>{link.name}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
 
       {/* Hero Section */}
-      <section>
-        <div className="text-center">
-          <h1 className="font-bold text-3xl md:text-5xl mt-28 mb-5">
-            Frontend Engineer
-          </h1>
-          <h3 className="font-bold text-xl md:text-3xl tracking-wide mb-3">
-            Hello, my name is{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-              Jabir Khan
-            </span>
-          </h3>
-          <p className="text-sm md:text-base/7 px-1 md:px-5 tracking-wide">
-            As a Front-End Engineer with 1.5 years of professional experience, I
-            specialize in building responsive and user-friendly websites using
-            HTML, CSS, JavaScript, and React. I prioritize clean code practices,
-            performance optimization, and seamless user experiences, while
-            actively upgrading my skills to stay aligned with evolving industry
-            trends.
-          </p>
-          <div className="mt-10">
-            <a
-              className="inline-flex items-center gap-2 text-gray-300 hover:text-white bg-gradient-to-r from-gray-900 to-gray-800 px-6 py-3 rounded-xl shadow-lg shadow-gray-700/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-gray-700/60"
-              download
-              href="/Resume/Frontend_Engineer.pdf"
-            >
-              Download CV{" "}
-              <FaDownload
-                size={16}
-                className="transition-transform duration-300 group-hover:translate-y-1"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
+      <div className="flex flex-col items-center justify-center text-center mt-28 md:mt-36 px-4 md:px-0">
+        <h1 className="font-extrabold text-3xl md:text-5xl mb-4 text-gray-700">
+          Frontend Engineer
+        </h1>
+        <h2 className="font-bold text-xl md:text-5xl mb-4">
+          Hello, my name is{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+            Jabir Khan
+          </span>
+        </h2>
+        <p className="text-gray-600 text-sm md:text-base max-w-2xl leading-relaxed mb-8 px-2 md:px-0">
+          As a Front-End Engineer with 1.5 years of professional experience, I
+          specialize in building responsive and user-friendly websites using
+          HTML, CSS, JavaScript, and React. I prioritize clean code practices,
+          performance optimization, and seamless user experiences, while
+          actively upgrading my skills to stay aligned with evolving industry
+          trends.
+        </p>
+
+        {/* Download CV Button */}
+        <a
+          className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-pink-500/40 hover:scale-105 hover:shadow-xl transition-all duration-300"
+          download
+          href="/Resume/Frontend_Engineer.pdf"
+        >
+          Download CV <FaDownload size={18} className="ml-1" />
+        </a>
+      </div>
     </section>
   );
 };
