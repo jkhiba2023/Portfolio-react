@@ -81,6 +81,7 @@ export const Contact = () => {
             <input
               type="text"
               name="fullName"
+              autoComplete="off"
               placeholder="Full Name"
               value={meet.fullName}
               onChange={handleInputChange}
@@ -90,6 +91,7 @@ export const Contact = () => {
             <input
               type="email"
               name="emailid"
+              autoComplete="off"
               placeholder="Email"
               value={meet.emailid}
               onChange={handleInputChange}
@@ -99,6 +101,7 @@ export const Contact = () => {
             <input
               type="text"
               name="phoneNumber"
+              autoComplete="off"
               placeholder="Phone Number"
               value={meet.phoneNumber}
               onChange={handleInputChange}
@@ -108,6 +111,7 @@ export const Contact = () => {
             <textarea
               name="message"
               rows="5"
+              autoComplete="off"
               placeholder="Your Message"
               value={meet.message}
               onChange={handleInputChange}
