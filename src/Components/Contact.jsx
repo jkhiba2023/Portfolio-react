@@ -34,7 +34,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="mt-24 px-4 md:px-0">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 border-b-4 border-blue-500 inline-block pb-2">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-600 border-b-4 border-blue-500 inline-block pb-2">
           Contact
         </h1>
       </div>
