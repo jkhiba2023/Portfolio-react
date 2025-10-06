@@ -12,33 +12,33 @@ export const About = () => {
         <div className="text-gray-700 space-y-6 text-base md:text-lg leading-relaxed tracking-wider">
           <p>
             Hi, I’m{" "}
-            <span className="font-semibold text-gray-900">Jabir Khan</span>, a
+            <span className="font-semibold text-gray-600">Jabir Khan</span>, a
             passionate{" "}
-            <span className="font-semibold text-gray-900 ">
+            <span className="font-semibold text-gray-600 ">
               Front-End Engineer{" "}
             </span>
             with over a year of hands-on experience creating responsive and
             user-friendly websites. My journey began with a strong foundation in{" "}
-            <span className="font-semibold text-gray-900">
+            <span className="font-semibold text-gray-600">
               HTML, CSS, and JavaScript
             </span>
             , and I am now expanding my expertise by learning{" "}
-            <span className="font-semibold text-gray-900">React 19</span>
+            <span className="font-semibold text-gray-600">React 19</span>
             to build dynamic and interactive applications.
           </p>
 
           <p>
             I hold a{" "}
-            <span className="font-semibold text-gray-900">
+            <span className="font-semibold text-gray-600">
               Bachelor of Science in Information Technology
             </span>
             from the{" "}
-            <span className="font-semibold text-gray-900">
+            <span className="font-semibold text-gray-600">
               University of Mumbai (2016–2020)
             </span>
             . My professional journey has given me exposure to both development
             and non-IT roles, helping me sharpen my
-            <span className="font-semibold text-gray-900">
+            <span className="font-semibold text-gray-600">
               {" "}
               analytical, problem-solving, and communication skills
             </span>
